@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+/* classes uteis/animaçoes ----------------------*/
+
+.show {
+    display: flex !important;        
+}
+
+.hide{
+    display: none;
+}
+
+/* elemento flex para separar a nav bar do conteudo------------ */
+
+.flex-container{
+    display: flex;
+    flex-flow: row;
+    
+}
+
+
+
+
+/* navbar/menu---------------------------- */
+#seta-menu{
+    cursor: pointer;
+    top: 45%;
+    left: 1%;
+
+    position: fixed;
+}
+
+#seta-menu:hover{
+    transition: 0.1s;
+    filter: invert(0%) brightness(10%) contrast(10%);
+}
+
+.menu-fantasma{
+    display: none;
+    flex: 18%;
+
+}
+
+.navbar{
+    z-index: 1;
+    width: 18%;
+    position: fixed;
+    display: none;
+    height: 100vh;
+    flex-flow: column;
+    justify-content: center;
+    background: rgb(197, 74, 74);
+
+
+    /* border: 1px solid red; */
+}
+
+.navbar img{
+    width: ;
+    position: fixed;
+    top: 18%;
+    left: 8.2%;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+
+    /* border: 1px solid yellow; */
+}
+
+.menu li:hover{
+    cursor: pointer;
+    background: rgb(170, 64, 64);
+    transition: 0.2s;
+}
+
+
+.logo{
+    position: fixed;
+    top: 10%;
+    left: 45%;
+    
+}
+
+
+/* main/conteudo da pagina----------------- */
+
+.conteudo{
+    flex: 82%;
+    height: 100vh;
+
+    
+
+    /* border: solid blueviolet; */
+}
+
+/* header */
+
+.header{
+    text-align: center;
+    height: 110px;
+
+    /* border: 1px solid green; */
+}
+
+
+
+/* main */
+
+.main{
+    display: flex;
+    flex-flow: column;
+    
+}
+
+#ponto{
+    width: 100px;
+    cursor: pointer;
+    margin: 0;
+    color: rgb(170, 64, 64);
+}
+
+#ponto2{
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    color: rgb(170, 64, 64);
+}
+
+.main ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main ul li{
+    border-radius: 15px;
+    height: 200px;
+    width: 840px;
+    margin-bottom: 20px;
+    background: rgba(145, 144, 144, 0.39);
+}
+
+.main ul li img{
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+
+#mais{
+    display: none;
+}
+
+/* footer */
+
+.footer{
+    height: 200px;
+    background: gray;
+}
+
+.footerlinks{
+    text-align: center;
+    
+}
+
+.logofooter{
+    padding-top: 4vh;
+    padding-left: 4vh;
+    filter: brightness(0%);
+    
+}
+
+.footertext1{
+    padding-top: 4vh;
+    padding-left: 4vh;
+}
+
+.footercontent1{
+}
+
+
+
+
+
+
+/* mudar scrollbar da pagina----------- */
+
+::-webkit-scrollbar {
+    background-color: #64646483;
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background-color: rgb(170, 64, 64) ;
+    border-radius: 5px;
+
+}
