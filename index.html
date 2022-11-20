@@ -1,481 +1,335 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade de Tecnologia de Campinas</title>
+    <link rel="icon" href="https://www.fateccampinas.com.br/site/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 
-/* ---------------------------------------------------------------------------------------- */
+</head>
 
-/* classes uteis/animaçoes ---------------------------------------------------------------- */
+<body>
 
-.show {
-    display: flex !important;
-}
 
-.hide {
-    display: none !important;
-}
 
+    <div id="seta-menu" onclick="show()">
+        <img src="assets/icons8-chevron-right-90.png" alt="">
+    </div>
 
-/* ---------------------------------------------------------------------------------------- */
+    <div id="seta-menu2" class="hide" onclick="show()">
+        <img src="assets/icons8-chevron-left-90.png" alt="">
+    </div>
 
-/* elemento flex para separar a nav bar do conteudo---------------------------------------- */
 
-.flex-container {
-    display: flex;
-    flex-flow: row;
+    <nav id="navbar" class="navbar hide1">
 
-}
+        <div class="pesquisa">
+            <img style="width: 20px;" src="assets/search_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <input type="search" placeholder="Pesquisar">
+        </div>
 
+        <div class="logo">
+            <img src="https://www.fateccampinas.com.br/site/favicon.ico" alt="fatecicon">
+        </div>
 
+        <ul class="menu">
 
-/* ---------------------------------------------------------------------------------------- */
+            <li>HOME</li>
+            <li>INSTITUCIONAL</li>
+            <li>BIBLIOTECA</li>
+            <li>GRADUAÇÃO</li>
 
-/* navbar/menu----------------------------------------------------------------------------- */
-#seta-menu {
-    cursor: pointer;
-    top: 45%;
-    left: 1%;
+        </ul>
 
-    position: fixed;
-}
+    </nav>
 
 
-#seta-menu:hover {
-    transition: 0.1s;
-    filter: brightness(88%) contrast(120%);
-}
+    <div class="flex-container">
 
-#seta-menu2 {
-    cursor: pointer;
-    top: 45%;
-    left: 20%;
+        <div id="menu-fantasma" class="menu-fantasma">a</div>
 
 
-    position: fixed;
-}
 
-#seta-menu2:hover {
-    transition: 0.1s;
-    filter: brightness(88%) contrast(120%);
+        <div class="conteudo">
 
-}
+            <header class="header">
+                <img style="width: 110px;" src="assets/Fatec_Campinas_logo.png" alt="">
+            </header>
 
-.menu-fantasma {
-    display: none;
-    flex: 18%;
+            <main class="main">
 
-}
+                <div class="slider">
 
-.navbar {
-    z-index: 1;
-    width: 18%;
-    position: fixed;
-    display: none;
-    height: 100vh;
-    flex-flow: column;
-    justify-content: center;
-    background: rgb(197, 74, 74);
+                    <div class="slides">
 
+                        <!-- radio buttons -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
 
-    /* border: 1px solid red; */
-}
+                        <!-- slide imagens -->
+                        <div class="slide first">
 
-.menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+                            <img src="assets/gestao-empresarial.jpg" alt="Imagem 1">
 
-.menu li {
-    text-align: center;
-    padding: 20px;
-    font-weight: bold;
-    font-size: 20px;
+                        </div>
 
-    /* border: 1px solid yellow; */
-}
+                        <div class="slide">
 
-.menu li:hover {
-    cursor: pointer;
-    background: rgb(170, 64, 64);
-    transition: 0.2s;
-}
-
-
-.logo {
-    position: fixed;
-    top: 8%;
-    left: 8.2%;
-
-}
-
-/* barra de pesquisa */
-
-.pesquisa {
-    left: 1.7%;
-    top: 16%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    border-radius: calc(0.5 * 44px);
-    width: 14%;
-    height: 34px;
-
-    /* border: 1px solid blue; */
-}
-
-.pesquisa input {
-    width: 80%;
-    height: 34px;
-    border-style: none;
-    padding-left: 15px;
-    font-size: 15px;
-    font-weight: 520;
-    border-radius: 40px;
-}
-
-textarea:focus,
-input:focus {
-    outline: none;
-}
-
-/* ---------------------------------------------------------------------------------------- */
-
-/* main/conteudo da pagina----------------------------------------------------------------- */
-
-.conteudo {
-    flex: 82%;
-    height: 100vh;
-
-
-
-    /* border: solid blueviolet; */
-}
-
-/* header */
-
-.header {
-    text-align: center;
-    height: 110px;
-
-    /* border: 1px solid green; */
-}
-
-/* slides--------------------------------------------------------------------------------- */
-
-.slider {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    width: 1000px;
-    height: 410px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 2px 30px 11px rgba(0, 0, 0, 0.452);
-}
+                            <img src="assets/processos-quimicos.jpg" alt="Imagem 2">
 
-.slides {
-    width: 400%;
-    height: 410px;
-    display: flex;
+                        </div>
+                        <div class="slide">
 
-}
+                            <img src="assets/gestao-ti.jpg" alt="Imagem 3">
 
-.slide {
-    transition: 2s;
-}
+                        </div>
 
-.slides input {
-    display: none;
-}
+                        <div class="slide">
 
-.slide img {
-    width: 1000px;
-    height: 410px;
-}
-
-.manual-navigation {
-    position: absolute;
-    width: 1000px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn:hover {
-    background-color: white;
-}
-
-#radio1:checked~.first {
-    margin-left: 0;
-}
-
-#radio2:checked~.first {
-    margin-left: -25%;
-}
-
-#radio3:checked~.first {
-    margin-left: -50%;
-}
-
-#radio4:checked~.first {
-    margin-left: -75%;
-}
-
-#radio5:checked~.first {
-    margin-left: -100%;
-}
-
-.navigation div {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-
-}
-
-.navigation {
-    position: absolute;
-    width: 1000px;
-    margin-top: 370px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.navigation div:not(:last-child) {
-    margin-right: 40px;
-}
-
-#radio1:checked~.navigation .auto-btn1 {
-    background-color: white;
-
-}
-
-#radio2:checked~.navigation .auto-btn2 {
-    background-color: white;
-
-}
-
-#radio3:checked~.navigation .auto-btn3 {
-    background-color: white;
-
-}
-
-#radio4:checked~.navigation .auto-btn4 {
-    background-color: white;
-
-}
-
-#radio5:checked~.navigation .auto-btn5 {
-    background-color: white;
-
-}
-
-
-/* main */
-
-.main {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-.main ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.main ul li {
-    display: flex;
-    list-style: none;
-    border-radius: 15px;
-    height: 220px;
-    width: 840px;
-    margin-bottom: 50px;
-    background: rgba(145, 144, 144, 0.295);
-    /* box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.452); */
-    cursor: pointer;
-
-}
-.main p{
-    color: #6B6B6B;
-}
-.main h1{
-    font-size: 15px;
-    color: #000000;
-}
-.main h2{
-    font-size: 12px;
-    color: #505050;
-}
-.main h4{
-    font-size: 10px;
-    color: #363636;
-}
-
-.containertext {
-    padding-top: 2%;
-    font-size: 15px;
-    padding-left: 3.5%;
-    flex-direction: column;
-    width: 67%;
-}
-
-.main ul li:hover {
-
-    box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.315);
-    transition: 0.3s;
-
-}
-
-.main ul li img {
-    width: 250px;
-    height: 220px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-
-}
-
-.main button {
-
-    padding: 5px 45px;
-    cursor: pointer;
-    background-color: rgb(197, 74, 74);
-    border: none;
-    border-radius: 70px;
-    margin-top: 40px;
-    margin-bottom: 55px;
-
-}
-
-.main button:hover {
-    background: rgb(170, 64, 64);
-    transition: 0.2s;
-}
-
-.main button p {
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-}
-
-/* footer */
-
-/* footer */
-
-footer p{
-    padding: 0;
-    margin: 0;
-    color: black;
-}
-
-footer a{
-    text-decoration: none;
-    color: #6F6F6F;
-}
-
-footer a:hover{
-    color: #a61f21;
-}
-
-.container{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-}
-
-.contato{
-    width: 26%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aliceblue;
-    border: 1px solid black; */
-}
-.paddingcontato{
-    padding-top: 5%;
-    padding-bottom: 15%;
-    filter: brightness(0%);
-}
-.paddingcontato2{
-    padding-left: 2%;
-}
-.links{
-    width: 18%;
-    height: 200px;
-    justify-content: center;
-    text-align: center;
-    /* background-color: aliceblue;
-    border: 1px solid black; */
-}
-.paddinglinks{
-    padding-top: 12%;
-    padding-bottom: 9%;
-}
-.socialmedia{
-    display: flex;
-    width: 20%;
-    height: 200px;
-    justify-content: flex-end;
-    /* background-color: aliceblue;
-    border: 1px solid black; */
-}
-.padright{
-    padding-right: 2%;
-}
-.smicons{
-    height: 5vh;
-    width: 6vh;
-    padding-left: 15%;
-    padding-top: 5%;
-}
-.smlinks{
-    height: 5vh;
-    width: 6vh;
-}
-.smicons:hover{
-    filter: invert(22%) sepia(23%) saturate(6656%) hue-rotate(338deg) brightness(87%) contrast(104%);
-}
-
-
-/* mudar scrollbar da pagina----------- */
-
-::-webkit-scrollbar {
-    background-color: #64646483;
-    width: 10px;
-
-}
-
-::-webkit-scrollbar-thumb {
-
-    background-color: rgb(170, 64, 64);
-    border-radius: 5px;
-
-}
+                            <img src="assets/gestao-energia.jpg" alt="Imagem 4">
+
+                        </div>
+
+                        <div class="slide">
+
+                            <img src="assets/ads.jpg" alt="Imagem 5">
+
+                        </div>
+
+                        <!-- navegação -->
+
+                        <div class="navigation">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="manual-navigation">
+
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+
+                    </div>
+
+
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia1.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Vestibular Fatec</p>
+                            <h1>RELAÇÃO DOS CANDIDATOS CONVOCADOS NA 7ª CHAMADA VESTIBULAR 1º SEMESTRE DE 2022</h1>
+                            <h2>Confira a relação dos candidatos da 7ª chamada do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia1.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Vestibular Fatec</p>
+                            <h1>RELAÇÃO DOS CANDIDATOS CONVOCADOS NA 6ª CHAMADA VESTIBULAR 1º SEMESTRE DE 2022</h1>
+                            <h2>Confira a relação dos candidatos da 6ª chamada do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia2.jpeg" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em INOVA</p>
+                            <h1>Inscrições INOVA</h1>
+                            <h2>Confira as informações para as inscrições no INOVA 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia1.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Vestibular Fatec</p>
+                            <h1>RELAÇÃO DOS CANDIDATOS CONVOCADOS NA 5ª CHAMADA VESTIBULAR 1º SEMESTRE DE 2022</h1>
+                            <h2>Confira a relação dos candidatos da 5ª chamada do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+                <button id="btn-mais" onclick="veja_mais()">
+
+                    <p>VEJA MAIS</p>
+
+                </button>
+
+                <ul id="conteudo2" class="hide">
+
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia1.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Vestibular Fatec</p>
+                            <h1>RELAÇÃO DOS CANDIDATOS CONVOCADOS NA 4ª CHAMADA VESTIBULAR 1º SEMESTRE DE 2022</h1>
+                            <h2>Confira a relação dos candidatos da 4ª chamada do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/noticia1.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Vestibular Fatec</p>
+                            <h1>RELAÇÃO DOS CANDIDATOS CONVOCADOS NA 3ª CHAMADA VESTIBULAR 1º SEMESTRE DE 2022</h1>
+                            <h2>Confira a relação dos candidatos da 3ª chamada do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 9 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/informativo.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Fatec</p>
+                            <h1>Informativo nº 01/2022 – Faculdade de Tecnologia de Campinas</h1>
+                            <h2>Confira o informativo da FATEC em atendimento ao Plano São Paulo do Governo do Estado de São Paulo, que reflete na retomada das aulas presenciais para o 1º semestre de 2022.</h2>
+                            <h4>há 10 meses</h4>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+                <button id="btn-mais2" class="hide" onclick="veja_mais2()">
+
+                    <p>VEJA MAIS</p>
+
+                </button>
+
+                <ul id="conteudo3" class="hide">
+
+                    <li>
+                        <div class="">
+                            <img src="assets/processo-seletivo.jpg" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Fatec</p>
+                            <h1>Cronograma Processo Seletivo Vestibular 1º Semestre 2022</h1>
+                            <h2>Confira o processo sletivo do vestibular 1º semestre de 2022.</h2>
+                            <h4>há 10 meses</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/websai.png" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em WebSAI</p>
+                            <h1>WebSAI 2021</h1>
+                            <h2>Confira as informações para as inscrições no WebSAI 2021.</h2>
+                            <h4>há 1 ano</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <img src="assets/chile.webp" class="" alt="">
+                        </div>
+                        <div class="containertext">
+                            <p>em Fatec</p>
+                            <h1>Edital de Abertura de Inscrições para o Curso de español</h1>
+                            <h2>Edital de Abertura de Inscrições para o Curso de español – conociendo Chile na modalidade virtual, oferecido pelo DUOC_UC – Chile.</h2>
+                            <h4>há 1 ano</h4>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+                <button id="btn-mais3" class="hide" onclick="veja_mais3()">
+
+                    <p>VEJA MAIS</p>
+
+                </button>
+
+            </main>
+
+            <footer class="footer">
+
+                <div class="container">
+        
+                    <div class="contato paddingcontato2">
+                        <img src="https://www.fateccampinas.com.br/site/favicon.ico" class="paddingcontato" alt="fatecicon">
+                        <p class="">© 2022 Fatec Campinas, SP | <br>
+        
+                            Telefone: +55 19 3216.6474</p>
+                    </div>
+                    <div class="links">
+                        <p class="paddinglinks">Fatec Campinas</p>
+        
+                        <a href="" target="_blank" class="">Sobre</a><br>
+        
+                        <a href="" target="_blank" class="">Endereço</a><br>
+        
+                        <a href="https://www.cps.sp.gov.br" target="_blank" class="">Centro Paula Souza</a><br>
+                    </div>
+                    <div class="links">
+                        <p class="paddinglinks">Acadêmico</p>
+        
+                        <a href="" target="_blank" class="">Docentes</a><br>
+                    </div>
+                    <div class="links">
+                        <p class="paddinglinks">Campus Life</p>
+        
+                        <a href="" target="_blank" class="">Calendário de Eventos</a><br>
+                    </div>
+                    <div class="socialmedia padright">
+                        <a href="https://azureforeducation.microsoft.com/devtools" target="_blank" class="smlinks"><img src="assets/win.png" class="smicons" alt="windowsicon"></a>
+                        <a href="https://www.facebook.com/fateccps/" target="_blank" class="smlinks"><img src="assets/face.png" class="smicons" alt="facebookicon"></a>
+                        <a href="http://www.fatec.sp.gov.br/view/Default.aspx" target="_blank" class="smlinks"><img src="assets/mail.png" class="smicons" alt="emailkicon"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="js.js"></script>
+
+</body>
+
+</html>
