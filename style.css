@@ -324,18 +324,22 @@ input:focus {
     cursor: pointer;
 
 }
-.main p{
+
+.main p {
     color: #6B6B6B;
 }
-.main h1{
+
+.main h1 {
     font-size: 15px;
     color: #000000;
 }
-.main h2{
+
+.main h2 {
     font-size: 12px;
     color: #505050;
 }
-.main h4{
+
+.main h4 {
     font-size: 10px;
     color: #363636;
 }
@@ -390,28 +394,36 @@ input:focus {
 
 /* footer */
 
-footer p{
+footer {
+    background-color: #DFDEDE;
+}
+
+footer p {
     padding: 0;
     margin: 0;
     color: black;
+    font-weight: bold;
 }
 
-footer a{
+footer a {
     text-decoration: none;
-    color: #6F6F6F;
+    color: #585858;
+
 }
 
-footer a:hover{
+footer a:hover {
     color: #a61f21;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.582);
+
 }
 
-.contato{
+.contato {
     width: 26%;
     height: 200px;
     justify-content: center;
@@ -419,15 +431,18 @@ footer a:hover{
     /* background-color: aliceblue;
     border: 1px solid black; */
 }
-.paddingcontato{
+
+.paddingcontato {
     padding-top: 5%;
     padding-bottom: 15%;
     filter: brightness(0%);
 }
-.paddingcontato2{
+
+.paddingcontato2 {
     padding-left: 2%;
 }
-.links{
+
+.links {
     width: 18%;
     height: 200px;
     justify-content: center;
@@ -435,11 +450,14 @@ footer a:hover{
     /* background-color: aliceblue;
     border: 1px solid black; */
 }
-.paddinglinks{
+
+.paddinglinks {
     padding-top: 12%;
     padding-bottom: 9%;
 }
-.socialmedia{
+
+.socialmedia {
+    margin-top: 20px;
     display: flex;
     width: 20%;
     height: 200px;
@@ -447,20 +465,24 @@ footer a:hover{
     /* background-color: aliceblue;
     border: 1px solid black; */
 }
-.padright{
+
+.padright {
     padding-right: 2%;
 }
-.smicons{
+
+.smicons {
     height: 5vh;
     width: 6vh;
     padding-left: 15%;
     padding-top: 5%;
 }
-.smlinks{
+
+.smlinks {
     height: 5vh;
     width: 6vh;
 }
-.smicons:hover{
+
+.smicons:hover {
     filter: invert(22%) sepia(23%) saturate(6656%) hue-rotate(338deg) brightness(87%) contrast(104%);
 }
 
