@@ -73,3 +73,56 @@ function nextImage() {
 
     document.getElementById("radio" + count).checked = true
 }
+
+
+function dropdown() {
+    var content = document.getElementById('dropdown-content')
+
+
+
+    if (content.classList.contains('hide')) {
+
+        content.classList.add('show2')
+        content.classList.remove('hide')
+
+    } else {
+
+        content.classList.remove('show2')
+        content.classList.add('hide')
+    }
+
+}
+
+function dropdown2() {
+    var content2 = document.getElementById('dropdown-content2')
+
+
+
+    if (content2.classList.contains('hide')) {
+
+        content2.classList.add('show2')
+        content2.classList.remove('hide')
+
+    } else {
+
+        content2.classList.remove('show2')
+        content2.classList.add('hide')
+    }
+
+}
+
+function dropdown3() {
+    var content3 = document.getElementById('dropdown-content3')
+
+    if (content3.classList.contains('hide')) {
+
+        content3.classList.add('show2')
+        content3.classList.remove('hide')
+
+    } else {
+
+        content3.classList.remove('show2')
+        content3.classList.add('hide')
+    }
+
+}
