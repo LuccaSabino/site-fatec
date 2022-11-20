@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,55 @@
     <link rel="icon" href="https://www.fateccampinas.com.br/site/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 
 </head>
+
 <body>
-    
-   
+
+
 
     <div id="seta-menu" onclick="show()">
         <img src="assets/icons8-chevron-right-90.png" alt="">
     </div>
 
+    <div id="seta-menu2" class="hide" onclick="show()">
+        <img src="assets/icons8-chevron-left-90.png" alt="">
+    </div>
+
+
     <nav id="navbar" class="navbar hide1">
+
+        <div class="pesquisa">
+            <img style="width: 20px;" src="assets/search_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <input type="search" placeholder="Pesquisar">
+        </div>
+
         <div class="logo">
             <img src="https://www.fateccampinas.com.br/site/favicon.ico" alt="fatecicon">
         </div>
-            
+
         <ul class="menu">
 
-            <li onclick="show()">HOME</li>
+            <li>HOME</li>
             <li>INSTITUCIONAL</li>
             <li>SOBRE</li>
             <li>CONTATO</li>
-    
+
         </ul>
 
     </nav>
-        
-        
+
+
     <div class="flex-container">
 
         <div id="menu-fantasma" class="menu-fantasma">a</div>
 
-            
+
 
         <div class="conteudo">
 
@@ -52,31 +67,121 @@
 
             <main class="main">
 
+                <div class="slider">
+
+                    <div class="slides">
+
+                        <!-- radio buttons -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+
+                        <!-- slide imagens -->
+                        <div class="slide first">
+
+                            <img src="assets/gestao-empresarial.jpg" alt="Imagem 1">
+
+                        </div>
+
+                        <div class="slide">
+
+                            <img src="assets/processos-quimicos.jpg" alt="Imagem 2">
+
+                        </div>
+                        <div class="slide">
+
+                            <img src="assets/gestao-ti.jpg" alt="Imagem 3">
+
+                        </div>
+
+                        <div class="slide">
+
+                            <img src="assets/gestao-energia.jpg" alt="Imagem 4">
+
+                        </div>
+
+                        <div class="slide">
+
+                            <img src="assets/ads.jpg" alt="Imagem 5">
+
+                        </div>
+
+                        <!-- navegação -->
+
+                        <div class="navigation">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="manual-navigation">
+
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+
+                    </div>
+
+
+
+                </div>
+
                 <ul>
 
-                    <li><img src="https://www.fateccampinas.com.br/site/images/cronograma_vestibular_2022.jpg" alt=""></li>
+                    <li><img src="https://www.fateccampinas.com.br/site/images/cronograma_vestibular_2022.jpg" alt="">
+                    </li>
                     <li><img src="" alt=""></li>
                     <li><img src="" alt=""></li>
                     <li><img src="" alt=""></li>
-                    
+
 
                 </ul>
 
-                <img id="ponto" onclick="mais()" src="assets/more.png" alt="">
+                <button id="btn-mais" onclick="veja_mais()">
 
+                    <p>VEJA MAIS</p>
 
-                <ul id="mais">
+                </button>
+
+                <ul id="conteudo2" class="hide">
 
                     <li><img src="" alt=""></li>
                     <li><img src="" alt=""></li>
                     <li><img src="" alt=""></li>
-                    
-                    
+
+
 
                 </ul>
 
-                <img id="ponto2" class="hide" onclick="mais()" src="assets/more.png" alt="">
+                <button id="btn-mais2" class="hide" onclick="veja_mais2()">
 
+                    <p>VEJA MAIS</p>
+
+                </button>
+
+                <ul id="conteudo3" class="hide">
+
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+
+
+
+                </ul>
+
+                <button id="btn-mais3" class="hide" onclick="veja_mais3()">
+
+                    <p>VEJA MAIS</p>
+
+                </button>
 
             </main>
 
@@ -84,7 +189,7 @@
                 <div class="footercontent1">
                     <img src="https://www.fateccampinas.com.br/site/favicon.ico" class="logofooter" alt="fatecicon">
                     <p class="footertext1">© 2022 Fatec Campinas, SP | <br>
-                Telefone: +55 19 3216.6474</p>
+                        Telefone: +55 19 3216.6474</p>
                 </div>
                 <!-- <div class="footercontent2">
                     <p>Fatec Campinas</p>
@@ -95,13 +200,14 @@
             </footer>
         </div>
 
-            
+
 
     </div>
-    
-    
+
+
 
     <script src="js.js"></script>
 
 </body>
+
 </html>
