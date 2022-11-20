@@ -110,6 +110,7 @@ body {
 
 
 .logo {
+    filter: contrast(10%) brightness(300%);
     position: fixed;
     top: 8%;
     left: 8.2%;
