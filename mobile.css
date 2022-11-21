@@ -6,6 +6,15 @@
 
     }
 
+
+    #seta-menu{
+        display: none !important;
+    }
+
+    #seta-menu2{
+        display: none !important;
+    }
+
     .nav2{
         display: flex !important;
         width: 100%;
