@@ -1,5 +1,14 @@
 @media only screen and (max-width: 1025px) {
     
+    .slider{
+        width: 600px !important;
+        height: auto !important;
+
+    }
+
+    .conteudo{
+        flex:100%;
+    }
 
     #seta-menu{
         display: none !important;
