@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1441px) {
     
     .slider{
-        width: 800px;
+        width: 800px !important;
 
     }
 
