@@ -10,6 +10,15 @@
         flex:100%;
     }
 
+    .navbar{
+        display: none !important;
+
+    }
+
+    .menu-fantasma{
+        display: none !important;
+    }
+
     #seta-menu{
         display: none !important;
     }
