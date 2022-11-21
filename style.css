@@ -195,7 +195,7 @@ input:focus {
 /* main/conteudo da pagina----------------------------------------------------------------- */
 
 .conteudo {
-    flex: 82%;
+    flex: 100%;
     height: 100vh;
 
 
