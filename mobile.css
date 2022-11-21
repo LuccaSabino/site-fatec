@@ -13,5 +13,8 @@
 
     }
 
+    .nav2 ul li{
+        display: inline-block;
+    }
 
 }
